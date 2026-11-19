@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Mandalaye Park Estate — a family-run 142-acre countryside escape on French Island, Victoria. Farm stays, weddings and island experiences, 1.5 hours from Melbourne.">
+<title>Mandalaye Park Estate — French Island, Victoria</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#243C30; --forest2:#1B2E24; --ivory:#F7F4EC; --ivory2:#EFE9DB; --sage:#A4AD91; --sage-light:#D9DDCE;
+  --taupe:#B8A58E; --charcoal:#292B26; --brass:#A98A4A; --brass2:#C6A86A;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);background:var(--ivory);color:var(--charcoal);line-height:1.7;font-size:16px}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;margin:0;color:var(--forest)}
+.eyebrow{letter-spacing:.28em;text-transform:uppercase;font-size:.72rem;font-weight:700;color:var(--brass);margin:0 0 14px}
+.lead{font-size:1.08rem;color:#4A4D45}
+.wrap{width:min(1240px,92vw);margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:13px 28px;border-radius:999px;font-weight:700;font-size:.92rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:.25s}
+.btn-solid{background:var(--forest);color:#fff}.btn-solid:hover{background:var(--forest2)}
+.btn-gold{background:var(--brass);color:#fff}.btn-gold:hover{background:#96793E}
+.btn-outline{border-color:rgba(255,255,255,.85);color:#fff;background:rgba(0,0,0,.12)}.btn-outline:hover{background:#fff;color:var(--forest)}
+.btn-outline-dark{border-color:var(--forest);color:var(--forest);background:transparent}.btn-outline-dark:hover{background:var(--forest);color:#fff}
+.btn-sm{min-height:42px;padding:9px 20px;font-size:.85rem}
+/* HEADER */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.35s}
+.header-inner{width:min(1320px,94vw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+.logo{text-decoration:none;color:#fff;line-height:1}
+.logo b{font-family:var(--serif);font-weight:600;font-size:1.55rem;letter-spacing:.04em;display:block}
+.logo span{font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;opacity:.85}
+nav.main{display:flex;gap:26px;align-items:center}
+nav.main a{color:#fff;text-decoration:none;font-size:.86rem;font-weight:600;letter-spacing:.02em}
+nav.main a:hover{color:var(--brass2)}
+header.scrolled{background:rgba(247,244,236,.97);box-shadow:0 10px 30px rgba(0,0,0,.08)}
+header.scrolled .logo,header.scrolled nav.main a{color:var(--forest)}
+.burger{display:none;width:44px;height:44px;border:0;background:transparent;color:#fff;font-size:1.5rem;cursor:pointer}
+header.scrolled .burger{color:var(--forest)}
+.mobile-nav{display:none;background:var(--ivory);padding:10px 5vw 20px;border-top:1px solid #E3DCCB}
+.mobile-nav a{display:block;padding:12px 4px;text-decoration:none;font-weight:600;color:var(--forest);border-bottom:1px solid #EDE7D6}
+.mobile-nav.open{display:block}
+@media(max-width:980px){nav.main{display:none}.burger{display:block}header .btn{display:none}}
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--forest)}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,32,25,.42) 0%,rgba(20,32,25,.08) 38%,rgba(20,32,25,.72) 100%)}
+.hero-content{position:relative;z-index:2;width:min(1240px,92vw);margin:0 auto;padding:150px 0 84px}
+.hero .eyebrow{color:var(--brass2)}
+.hero h1{color:#fff;font-size:clamp(3rem,7.2vw,6.2rem);max-width:11ch}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero p.sub{font-size:clamp(1.05rem,2vw,1.3rem);max-width:540px;color:#F1EEDF}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.hero-meta span{border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:7px 14px;font-size:.8rem;font-weight:600;background:rgba(0,0,0,.18)}
+.scroll-hint{margin-top:36px;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+/* SECTIONS */
+section{padding:96px 0}
+.section-head{max-width:720px;margin-bottom:44px}
+.section-head h2{font-size:clamp(2.2rem,4.5vw,3.6rem)}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+/* INTRO */
+.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.intro-grid h2{font-size:clamp(2.3rem,4.5vw,3.7rem);margin-bottom:18px}
+.intro-img{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.intro-img img.main,.intro-img img.small{width:100%;height:480px;object-fit:cover;object-position:center;border-radius:6px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.stat{background:#fff;border:1px solid #E7E0CE;border-radius:8px;padding:16px;text-align:center}
+.stat b{font-family:var(--serif);font-size:1.7rem;color:var(--forest);display:block;line-height:1}
+.stat span{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6B6E64}
+/* EXPERIENCE */
+.exp-section{background:var(--forest);color:#EDE9DA}
+.exp-section h2,.exp-section .section-head h2{color:#fff}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.exp-card{background:#2E4A3B;border-radius:10px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:.3s}
+.exp-card:hover{transform:translateY(-5px)}
+.exp-card .imgwrap{height:260px;flex:0 0 auto;overflow:hidden}
+.exp-card img{width:100%;height:100%;object-fit:cover;object-position:center;transition:.6s}
+.exp-card:hover img{transform:scale(1.06)}
+.exp-card .body{padding:24px}
+.exp-card h3{color:#fff;font-size:1.7rem;margin-bottom:8px}
+.exp-card p{color:#D8D5C6;font-size:.95rem;margin:0 0 14px}
+.exp-card .link{color:var(--brass2);font-weight:700;font-size:.88rem}
+/* ESTATE */
+.estate-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.estate-grid figure{margin:0;position:relative;overflow:hidden;border-radius:8px}
+.estate-grid img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.estate-grid figure:hover img{transform:scale(1.04)}
+.estate-grid figcaption{position:absolute;left:14px;bottom:12px;color:#fff;font-weight:700;font-size:.85rem;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.e1,.e2,.e3,.e4{grid-column:span 6;height:360px}
+/* STAY */
+.stay-section{background:var(--ivory2)}
+.stay-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.stay-card{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #E2DAC6;display:grid;grid-template-columns:1fr}
+.stay-card .imgwrap{height:240px;overflow:hidden}
+.stay-card img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.stay-card:hover img{transform:scale(1.05)}
+.stay-card .body{padding:24px;display:flex;flex-direction:column}
+.stay-card h3{font-size:1.65rem;margin-bottom:6px}
+.stars{color:var(--brass);font-weight:700;font-size:.85rem;letter-spacing:.04em}
+.stay-card p{font-size:.93rem;color:#55584F;flex:1}
+.amen{font-size:.82rem;font-weight:600;color:var(--forest);background:var(--sage-light);border-radius:6px;padding:8px 10px;margin:10px 0 14px}
+.stay-actions{display:flex;gap:8px;flex-wrap:wrap}
+/* WEDDINGS */
+.wedding{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #E2DAC6}
+.wedding .imgwrap{min-height:520px;height:100%}
+.wedding img{width:100%;height:100%;object-fit:cover}
+.wedding .body{padding:52px 46px;display:flex;flex-direction:column;justify-content:center}
+.wedding h2{font-size:clamp(2.2rem,4vw,3.3rem);margin-bottom:16px}
+.checklist{list-style:none;padding:0;margin:18px 0 26px;display:grid;gap:10px}
+.checklist li{padding-left:28px;position:relative;font-weight:600;color:#44473F}
+.checklist li::before{content:"✓";position:absolute;left:0;color:var(--brass);font-weight:800}
+/* ISLAND */
+.island{background:var(--forest);color:#E9E5D6}
+.island h2{color:#fff;font-size:clamp(2.2rem,4.5vw,3.5rem)}
+.island-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.island-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.island-photos img{width:100%;height:252px;object-fit:cover;object-position:center;border-radius:8px}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.fact{border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:14px}
+.fact b{color:#fff;display:block;font-family:var(--serif);font-size:1.25rem}
+.fact span{font-size:.88rem;color:#CFCBBB}
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g-item{border:0;padding:0;background:none;cursor:pointer;border-radius:8px;overflow:hidden;height:260px}
+.g-item.tall{height:260px}.g-item.wide{grid-column:span 1}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:.55s}
+.g-item:hover img{transform:scale(1.06)}
+/* GETTING THERE + FORM */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.info-card{background:#fff;border:1px solid #E2DAC6;border-radius:10px;padding:26px;margin-bottom:16px}
+.info-card h3{font-size:1.45rem;margin-bottom:8px}
+.info-card p{margin:0;color:#55584F;font-size:.95rem}
+form.enquiry{background:#fff;border:1px solid #E2DAC6;border-radius:12px;padding:28px}
+form.enquiry label{font-weight:700;font-size:.88rem;display:block;margin:14px 0 6px}
+form.enquiry label:first-child{margin-top:0}
+form.enquiry input,form.enquiry select,form.enquiry textarea{width:100%;padding:12px 14px;border:1px solid #CFC7B0;border-radius:8px;font:inherit;background:#FDFBF6;min-height:46px}
+form.enquiry textarea{min-height:110px;resize:vertical}
+.form-msg{display:none;margin-top:16px;border-radius:8px;padding:14px;font-size:.92rem}
+.form-msg.ok{display:block;background:#E7EEE2;border:1px solid var(--sage);color:var(--forest)}
+.form-msg.err{display:block;background:#F8E9E4;border:1px solid #D9A08F;color:#7A2E1D}
+/* FINAL CTA */
+.final{position:relative;color:#fff;text-align:center;overflow:hidden;background:var(--forest)}
+.final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
+.final .inner{position:relative;z-index:2;padding:30px 0}
+.final h2{color:#fff;font-size:clamp(2.4rem,5vw,4rem)}
+.final p{color:#EDE9DA}
+/* FOOTER — single horizontal row */
+footer{background:var(--forest2);color:#D9D5C4}
+.footer-row{width:min(1320px,96vw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 0;flex-wrap:nowrap;overflow:hidden}
+.footer-row b{font-family:var(--serif);color:#fff;font-size:1.05rem;white-space:nowrap}
+.footer-row span,.footer-row a{font-size:.78rem;white-space:nowrap;text-decoration:none}
+.footer-row a:hover{color:var(--brass2)}
+.footer-links{display:flex;gap:16px}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(18,26,21,.94);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1000px,94vw);max-height:82vh;border-radius:8px;object-fit:contain}
+.lb-btn{position:absolute;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.35);color:#fff;font-size:1.3rem;cursor:pointer}
+.lb-close{top:18px;right:18px}.lb-prev{left:14px;top:50%}.lb-next{right:14px;top:50%}
+.lb-cap{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#EDE9DA;font-size:.9rem}
+@media(max-width:900px){
+  section{padding:64px 0}
+  .intro-grid,.island-grid,.visit-grid,.wedding{grid-template-columns:1fr}
+  .intro-img img.main,.intro-img img.small{height:240px}
+  .exp-grid,.stay-grid{grid-template-columns:1fr}
+  .stay-card{grid-template-columns:1fr}.stay-card .imgwrap{height:230px;min-height:0}
+  .e1,.e2,.e3,.e4{grid-column:span 12;height:280px}
+  .gallery-grid{grid-template-columns:1fr 1fr}.g-item,.g-item.tall{height:190px}.g-item.wide{grid-column:span 1}
+  .wedding .imgwrap{min-height:300px}.wedding .body{padding:30px 22px}
+  .stats{grid-template-columns:1fr 1fr 1fr}
+  .footer-row{gap:8px}.footer-row .hide-m{display:none}.footer-row .footer-links{display:none}.footer-row span,.footer-row a{font-size:.68rem}.footer-row b{font-size:.85rem}
+  .fact-grid{grid-template-columns:1fr}
+  .island-photos img{height:170px}
+  .stay-card .imgwrap{height:220px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header id="header">
+  <div class="header-inner">
+    <a class="logo" href="#home"><b>MANDALAYE PARK</b><span>Estate · Est. 2012</span></a>
+    <nav class="main" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#story">Our Story</a><a href="#experience">Farm Experience</a><a href="#stay">Accommodation</a><a href="#weddings">Weddings &amp; Events</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-gold btn-sm" href="#contact">Enquire Now</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a><a href="#story">Our Story</a><a href="#experience">Farm Experience</a><a href="#stay">Accommodation</a><a href="#weddings">Weddings &amp; Events</a><a href="#gallery">Gallery</a><a href="#contact">Contact — Enquire Now</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home" style="padding:0">
+  <img class="bg" src="https://www.mandalayepark.com/static/images/gallery/trees.jpg" alt="Magnificent oak trees over green lawns at Mandalaye Park Estate, French Island">
+  <div class="hero-content">
+    <p class="eyebrow">French Island · Victoria · Est. 2012</p>
+    <h1>Discover the Beauty of <em>Mandalaye Park</em></h1>
+    <p class="sub">A unique countryside escape on French Island, Victoria.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="#experience">Explore Mandalaye Park</a>
+      <a class="btn btn-outline" href="#contact">Plan Your Visit</a>
+    </div>
+    <div class="hero-meta"><span>142-acre island estate</span><span>≈ 1 hr 30 min from Melbourne</span><span>Family-run since 2012</span></div>
+    <div class="scroll-hint">Scroll to explore ↓</div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section id="story">
+  <div class="wrap intro-grid">
+    <div class="intro-img">
+      <img class="main" src="https://www.mandalayepark.com/static/images/carouselimages/caroselimage2.png" alt="Homestead veranda with pot plants at Mandalaye Park">
+      <img class="small" src="https://www.mandalayepark.com/static/images/aboutthumbnail.jpg" alt="Koala resting in a tree on French Island">
+    </div>
+    <div>
+      <p class="eyebrow">Our Story</p>
+      <h2>Where Country Life Meets Island Escape</h2>
+      <p class="lead">Mandalaye Park is a family-run estate set on 142 acres of rural French Island, in the middle of Westernport Bay — a place where the pace slows, the air clears, and country life is lived as it always has been.</p>
+      <p>Our suites sit in the grounds of the historic homestead, beneath magnificent oak trees where koalas rest in the treetops and peacocks wander at will. There are no through roads to anywhere else, no mains power or water — just solar, generators, open paddocks and island quiet, about an hour and a half from Melbourne yet a world away from it.</p>
+      <p>Come for a farm stay, a wedding beneath the oaks, or simply a few days of doing very little, beautifully.</p>
+      <div class="stats">
+        <div class="stat"><b>142</b><span>Acres</span></div>
+        <div class="stat"><b>4</b><span>Suites &amp; Cottage</span></div>
+        <div class="stat"><b>2012</b><span>Established</span></div>
+      </div>
+      <p style="margin-top:22px"><a class="btn btn-outline-dark" href="#island">Discover French Island</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="exp-section" id="experience">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">The Experience</p><h2>Three Ways to Slow Down</h2><p style="color:#CFCBBB">Every visit to Mandalaye Park is shaped by the island itself — its animals, its seasons and its stillness.</p></div>
+    <div class="exp-grid">
+      <a class="exp-card" href="#island"><div class="imgwrap"><img src="https://www.mandalayepark.com/static/images/gallery/peacock.jpg" alt="Peacock displaying its tail feathers at Mandalaye Park"></div><div class="body"><h3>Farm &amp; Island Experience</h3><p>Koalas in the treetops, peacocks on the lawn, wetlands and woodland to wander — on an island where around 70% is national and state park.</p><span class="link">Explore the island →</span></div></a>
+      <a class="exp-card" href="#stay"><div class="imgwrap"><img src="https://www.mandalayepark.com/static/images/carouselimages/caroselimage1.png" alt="Peaceful bedroom with white linen in Mandalaye Park accommodation"></div><div class="body"><h3>Country Accommodation</h3><p>Four welcoming stays in the historic homestead grounds — from the Luxury Cottage to The Field View — each with a queen bed and room for more.</p><span class="link">View the stays →</span></div></a>
+      <a class="exp-card" href="#weddings"><div class="imgwrap"><img src="https://www.mandalayepark.com/static/images/weddingsthumbnail.png" alt="Wedding ring box among pink petals"></div><div class="body"><h3>Weddings &amp; Special Events</h3><p>Ceremonies beneath magnificent oaks, celebrations across gardens, stables and indoor spaces — an island setting unlike any other.</p><span class="link">Plan your day →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ESTATE -->
+<section id="estate">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">The Estate</p><h2>142 Acres of Island Countryside</h2><p class="lead">Oak avenues, open paddocks, white front gates and a homestead at the heart of it all — this is Mandalaye Park as our family knows it.</p></div>
+    <div class="estate-grid">
+      <figure class="e1"><img src="https://www.mandalayepark.com/static/images/gallery/trees.jpg" alt="Large oak trees on a green lawn at Mandalaye Park"><figcaption>Beneath the oaks</figcaption></figure>
+      <figure class="e2"><img src="https://www.mandalayepark.com/static/images/gallery/frontgates.jpg" alt="White front gates and driveway at Mandalaye Park"><figcaption>The front gates</figcaption></figure>
+      <figure class="e3"><img src="https://www.mandalayepark.com/static/images/gallery/treetops.jpg" alt="Paddock, fence and trees across the estate"><figcaption>Open paddocks</figcaption></figure>
+      <figure class="e4"><img src="https://www.mandalayepark.com/static/images/diningtable.jpg" alt="Outdoor dining table on the veranda overlooking the lawn"><figcaption>Dining on the veranda</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- STAY -->
+<section class="stay-section" id="stay">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Accommodation</p><h2>Stay in the Homestead Grounds</h2><p class="lead">All rooms have a queen bed, and the sofa bed will sleep two more. Bookings are made via Airbnb or directly with Celia — rates and availability are shown on the Airbnb listings. Weekday and off-season bookings may attract up to 30% off, as listed on Airbnb.</p></div>
+    <div class="stay-grid">
+      <article class="stay-card"><div class="imgwrap"><img src="https://www.mandalayepark.com/static/images/carouselimages/caroselimage2.png" alt="Luxury Cottage veranda at Mandalaye Park"></div><div class="body"><h3>Luxury Cottage</h3><div class="stars">★ 4.92 on Airbnb</div><p>Also known as The Chicory Cottage — a private, self-contained cottage stay in the homestead grounds, and our guests' long-standing favourite.</p><div class="amen">Full kitchen · Laundry · Linen &amp; towels · Full-size fridge</div><div class="stay-actions"><a class="btn btn-solid btn-sm" href="https://www.airbnb.com.au/rooms/22455620" target="_blank" rel="noopener">Book on Airbnb</a><a class="btn btn-outline-dark btn-sm" href="#contact">Enquire</a></div></div></article>
+      <article class="stay-card"><div class="imgwrap"><img src="https://www.mandalayepark.com/static/images/carouselimages/caroselimage1.png" alt="The Bell Tower Suite bedroom with white linen"></div><div class="body"><h3>The Bell Tower Suite</h3><div class="stars">★ 5.0 on Airbnb</div><p>A serene suite in the homestead grounds — wake to birdsong, wander to the oaks, and let the island set the day's agenda.</p><div class="amen">Full kitchen · Laundry · Linen &amp; towels · Full-size fridge</div><div class="stay-actions"><a class="btn btn-solid btn-sm" href="https://www.airbnb.com.au/rooms/38471275" target="_blank" rel="noopener">Book on Airbnb</a><a class="btn btn-outline-dark btn-sm" href="#contact">Enquire</a></div></div></article>
+      <article class="stay-card"><div class="imgwrap"><img src="https://www.mandalayepark.com/static/images/carouselimages/caroselimage3.png" alt="Kitchen and dining interior in The Manager's Quarters"></div><div class="body"><h3>The Manager's Quarters</h3><div class="stars">★ 5.0 on Airbnb</div><p>Generous, comfortable quarters with its own kitchen and dining space — a true home base for longer island stays.</p><div class="amen">Full kitchen · Laundry · Linen &amp; towels · Full-size fridge</div><div class="stay-actions"><a class="btn btn-solid btn-sm" href="https://www.airbnb.com.au/rooms/1033817211106674384" target="_blank" rel="noopener">Book on Airbnb</a><a class="btn btn-outline-dark btn-sm" href="#contact">Enquire</a></div></div></article>
+      <article class="stay-card"><div class="imgwrap"><img src="https://www.mandalayepark.com/static/images/gallery/treetops.jpg" alt="Field and tree views from The Field View room"></div><div class="body"><h3>The Field View</h3><div class="stars">★ 5.0 on Airbnb</div><p>A simple, honest room with views across the fields — everything you need for a quiet night on the island, and nothing you don't.</p><div class="amen">Small bar fridge · Kettle · Toaster · Utensils</div><div class="stay-actions"><a class="btn btn-solid btn-sm" href="https://www.airbnb.com.au/rooms/1042457359805429503" target="_blank" rel="noopener">Book on Airbnb</a><a class="btn btn-outline-dark btn-sm" href="#contact">Enquire</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- WEDDINGS -->
+<section id="weddings">
+  <div class="wrap">
+    <div class="wedding">
+      <div class="imgwrap"><img src="https://www.mandalayepark.com/static/images/diningtable.jpg" alt="Elegant outdoor celebration table on the veranda at Mandalaye Park"></div>
+      <div class="body">
+        <p class="eyebrow">Weddings &amp; Special Events</p>
+        <h2>Celebrate Something Beautiful</h2>
+        <p class="lead">Mandalaye Park is an island paradise — magnificent oak trees create the perfect setting for a wedding ceremony, full of romance and intimacy, while koalas hang out in the treetops and peacocks wander about at will.</p>
+        <ul class="checklist">
+          <li>Indoor &amp; outdoor options for every part of your day</li>
+          <li>Beautiful gardens for your ceremony and reception</li>
+          <li>Photo locations across stables, sheds, gardens &amp; indoor spaces</li>
+          <li>A 142-acre island setting your guests will never forget</li>
+        </ul>
+        <p style="color:#55584F;font-size:.95rem">To book, contact Celia on <a href="tel:+61417392100" style="font-weight:700;color:var(--forest)">0417 392 100</a>.</p>
+        <p><a class="btn btn-gold" href="#contact">Enquire About Your Event</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRENCH ISLAND -->
+<section class="island" id="island">
+  <div class="wrap island-grid">
+    <div>
+      <p class="eyebrow" style="color:var(--brass2)">French Island</p>
+      <h2>An Island Like No Other</h2>
+      <p>French Island sits in Westernport Bay, 61 km southeast of Melbourne — 170 square kilometres of wetlands, salt marshes, coastal heaths and stringybark forest, home to just 100 residents. Around 70% of the island is crown land, state and national parks, protecting over 480 species of indigenous plants.</p>
+      <p>Koalas — introduced in the 1880s and free of the diseases that affect mainland populations — flourish here in large numbers, alongside echidnas and our own peacocks. There are no foxes, no mains water or electricity; island life runs on solar, generators and goodwill.</p>
+      <p>On the estate stands our historic chicory kiln, built in the early 1900s when chicory was the island's main income for over 70 years. Some artefacts remain in place — and today a family of barn owls nests in its roof.</p>
+      <div class="fact-grid">
+        <div class="fact"><b>480+</b><span>Indigenous plant species</span></div>
+        <div class="fact"><b>c. 1926</b><span>Our chicory kiln, still standing</span></div>
+        <div class="fact"><b>70%</b><span>Of the island is park &amp; crown land</span></div>
+        <div class="fact"><b>100</b><span>Island residents</span></div>
+      </div>
+    </div>
+    <div class="island-photos">
+      <img src="https://www.mandalayepark.com/static/images/gallery/sunset.jpg" alt="Sunset over the water from French Island">
+      <img src="https://www.mandalayepark.com/static/images/gallery/kilntoday.jpg" alt="The Mandalaye Park chicory kiln tower today under a blue sky">
+      <img src="https://www.mandalayepark.com/static/images/gallery/koala.jpg" alt="Koala in a tree on French Island">
+      <img src="https://www.mandalayepark.com/static/images/gallery/peacock.jpg" alt="Peacock displaying its tail feathers at Mandalaye Park">
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head center"><p class="eyebrow">Gallery</p><h2>Mandalaye Park, As It Is</h2><p class="lead">Real photographs from the estate and the island — tap any image to view it larger.</p></div>
+    <div class="gallery-grid" id="galleryGrid">
+      <button class="g-item tall" data-cap="A young koala at Mandalaye Park"><img src="https://www.mandalayepark.com/static/images/gallery/babykoala.jpg" alt="Young koala clinging to a tree"></button>
+      <button class="g-item wide" data-cap="The historic chicory kiln, in earlier days"><img src="https://www.mandalayepark.com/static/images/gallery/oldkiln.jpg" alt="Black-and-white photograph of the chicory kiln"></button>
+      <button class="g-item" data-cap="A peacock displaying on the lawn"><img src="https://www.mandalayepark.com/static/images/gallery/peacock.jpg" alt="Peacock displaying its tail feathers"></button>
+      <button class="g-item wide" data-cap="Paddocks and treetops across the estate"><img src="https://www.mandalayepark.com/static/images/gallery/treetops.jpg" alt="Paddock, fence and trees"></button>
+      <button class="g-item tall" data-cap="One of the locals, up close"><img src="https://www.mandalayepark.com/static/images/gallery/cow.jpg" alt="Close-up of a cow"></button>
+      <button class="g-item" data-cap="Beneath the magnificent oaks"><img src="https://www.mandalayepark.com/static/images/gallery/trees.jpg" alt="Large oak trees on a lawn"></button>
+      <button class="g-item" data-cap="Sunset over Westernport Bay"><img src="https://www.mandalayepark.com/static/images/gallery/sunset.jpg" alt="Sunset over water"></button>
+      <button class="g-item tall" data-cap="The white front gates"><img src="https://www.mandalayepark.com/static/images/gallery/frontgates.jpg" alt="White front gates and driveway"></button>
+      <button class="g-item" data-cap="The chicory kiln today"><img src="https://www.mandalayepark.com/static/images/gallery/kilntoday.jpg" alt="Chicory kiln tower today"></button>
+      <button class="g-item" data-cap="A koala in the treetops"><img src="https://www.mandalayepark.com/static/images/gallery/koala.jpg" alt="Koala in a tree facing the camera"></button>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT + ENQUIRY -->
+<section class="stay-section" id="contact" style="padding-top:80px">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Plan Your Visit</p><h2>Your Island Escape Begins Here</h2><p class="lead">Discover a different pace of life at Mandalaye Park. Send an enquiry, or reach Celia directly — she looks after every booking personally.</p></div>
+    <div class="visit-grid">
+      <div>
+        <div class="info-card"><h3>Contact Celia Fisher</h3><p>Phone: <a href="tel:+61417392100" style="font-weight:700;color:var(--forest)">0417 392 100</a><br>Email: <a href="mailto:c.fisher1@live.com" style="font-weight:700;color:var(--forest)">c.fisher1@live.com</a><br>Mandalaye Park Estate, 39 Mandalaye Park Road,<br>French Island VIC 3921, Australia</p></div>
+        <div class="info-card"><h3>Getting to French Island</h3><p>Western Port Ferries run daily from Stony Point pier (≈15 min) and Cowes, Phillip Island (≈20 min) to Tankerton Jetty. The passenger ferry doesn't carry vehicles — free parking is at Stony Point Foreshore, and Metro trains to Stony Point connect with sailings. The Spirit of French Island barge carries vehicles from Corinella. The island has 40+ km of gravel roads and tracks — bring a bike on the ferry, or simply walk.</p></div>
+        <div class="info-card"><h3>Booking a Stay</h3><p>Each suite is listed on Airbnb (links in Accommodation above), or contact Celia directly. Rates and availability are shown on the Airbnb listings.</p></div>
+        <img src="https://www.mandalayepark.com/static/images/todothumbnail.png" alt="Ferry travelling to French Island" style="width:100%;height:220px;object-fit:cover;border-radius:10px">
+      </div>
+      <form class="enquiry" id="enquiryForm" novalidate>
+        <h3 style="font-size:1.8rem;margin-bottom:4px">Make an Enquiry</h3>
+        <p style="margin:0;color:#66695E;font-size:.92rem">Stays, weddings, events or a farm visit — tell us what you're planning.</p>
+        <label for="f-name">Your name *</label><input id="f-name" name="name" type="text" autocomplete="name" required>
+        <label for="f-contact">Contact number *</label><input id="f-contact" name="phone" type="tel" autocomplete="tel" required>
+        <label for="f-email">Email *</label><input id="f-email" name="email" type="email" autocomplete="email" required>
+        <label for="f-type">Enquiry type</label>
+        <select id="f-type" name="type"><option>Accommodation</option><option>Wedding</option><option>Special event</option><option>Farm / island visit</option><option>Something else</option></select>
+        <label for="f-msg">Your message *</label><textarea id="f-msg" name="message" required placeholder="Dates you're considering, number of guests, anything else that helps…"></textarea>
+        <button class="btn btn-solid" type="submit" style="width:100%;margin-top:18px">Prepare My Enquiry</button>
+        <div class="form-msg" id="formMsg" role="status"></div>
+        <div id="copyBox" style="display:none;margin-top:12px">
+          <button class="btn btn-gold btn-sm" type="button" id="copyBtn">Copy Enquiry Text</button>
+          <a class="btn btn-outline-dark btn-sm" id="mailBtn" href="mailto:c.fisher1@live.com">Open in Email to Celia</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" style="padding:110px 0">
+  <img src="https://www.mandalayepark.com/static/images/gallery/sunset.jpg" alt="" aria-hidden="true">
+  <div class="wrap inner">
+    <p class="eyebrow" style="color:var(--brass2)">Mandalaye Park Estate</p>
+    <h2>Your Island Escape Begins Here</h2>
+    <p>Discover a different pace of life at Mandalaye Park.</p>
+    <div class="hero-ctas" style="justify-content:center"><a class="btn btn-gold" href="#contact">Make an Enquiry</a><a class="btn btn-outline" href="#estate">Explore the Estate</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-row">
+    <b>Mandalaye Park Estate</b>
+    <span class="hide-m">French Island, Victoria, Australia</span>
+    <div class="footer-links"><a href="#story">Our Story</a><a href="#stay">Stay</a><a href="#weddings">Weddings</a><a href="#gallery">Gallery</a></div>
+    <a href="tel:+61417392100">0417 392 100</a>
+    <a href="mailto:c.fisher1@live.com" class="hide-m">c.fisher1@live.com</a>
+    <span>© 2026 Mandalaye Park</span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Photo viewer">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
+  <img id="lbImg" src="https://www.mandalayepark.com/static/images/gallery/trees.jpg" alt="Mandalaye Park gallery photo">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo">›</button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+var header=document.getElementById('header');
+window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
+var burger=document.getElementById('burger'),mobileNav=document.getElementById('mobileNav');
+burger.addEventListener('click',function(){var open=mobileNav.classList.toggle('open');burger.setAttribute('aria-expanded',open);burger.textContent=open?'✕':'☰';});
+mobileNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mobileNav.classList.remove('open');burger.textContent='☰';});});
+
+// Lightbox
+var items=Array.prototype.slice.call(document.querySelectorAll('.g-item'));
+var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),idx=0;
+function show(i){idx=(i+items.length)%items.length;var img=items[idx].querySelector('img');lbImg.src=img.src;lbImg.alt=img.alt;lbCap.textContent=items[idx].getAttribute('data-cap')||img.alt;}
+items.forEach(function(it,i){it.addEventListener('click',function(){show(i);lb.classList.add('open');});});
+document.getElementById('lbClose').addEventListener('click',function(){lb.classList.remove('open');});
+document.getElementById('lbPrev').addEventListener('click',function(){show(idx-1);});
+document.getElementById('lbNext').addEventListener('click',function(){show(idx+1);});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')lb.classList.remove('open');if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1);});
+
+// Enquiry form — demo: prepares a copyable/email-ready summary, sends nothing itself
+var form=document.getElementById('enquiryForm'),msg=document.getElementById('formMsg'),copyBox=document.getElementById('copyBox'),lastText='';
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  var name=document.getElementById('f-name').value.trim(),phone=document.getElementById('f-contact').value.trim(),email=document.getElementById('f-email').value.trim(),type=document.getElementById('f-type').value,message=document.getElementById('f-msg').value.trim();
+  msg.className='form-msg';
+  if(!name||!phone||!email||!message){msg.classList.add('err');msg.textContent='Please complete your name, contact number, email and message so Celia has everything she needs.';copyBox.style.display='none';return;}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.classList.add('err');msg.textContent='That email address doesn\'t look quite right — please check it and try again.';copyBox.style.display='none';return;}
+  lastText='Mandalaye Park — '+type+' enquiry\n\nName: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\n\n'+message;
+  document.getElementById('mailBtn').href='mailto:c.fisher1@live.com?subject='+encodeURIComponent('Mandalaye Park — '+type+' enquiry')+'&body='+encodeURIComponent(lastText);
+  msg.classList.add('ok');msg.textContent='Thank you, '+name.split(' ')[0]+' — your enquiry is prepared below. No enquiry has been sent yet — this is a demo form. Copy the text or open it in your email to send it to Celia at c.fisher1@live.com.';
+  copyBox.style.display='flex';copyBox.style.gap='8px';copyBox.style.flexWrap='wrap';
+});
+document.getElementById('copyBtn').addEventListener('click',function(){
+  var btn=this;
+  if(navigator.clipboard&&lastText){navigator.clipboard.writeText(lastText).then(function(){btn.textContent='Copied ✓';setTimeout(function(){btn.textContent='Copy Enquiry Text';},2000);});}
+});
+</script>
+</body>
+</html>
